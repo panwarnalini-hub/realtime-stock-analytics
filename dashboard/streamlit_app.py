@@ -321,3 +321,16 @@ if st.button("Fetch Latest Data", use_container_width=True):
         
     else:
         st.error("Failed to fetch data. Please verify your API key and network connection.")
+        
+# Footer attribution
+st.markdown(
+    """
+    <hr style="margin-top: 3rem;">
+    <div style="text-align: center; color: #888; font-size: 0.85rem;">
+        Built by <b>Nalini Panwar</b> ·
+        <a href="https://github.com/panwarnalini-hub" target="_blank">GitHub</a> ·
+        <a href="https://www.linkedin.com/in/nalinipanwar/" target="_blank">LinkedIn</a>
+    </div>
+    """,
+    unsafe_allow_html=True
+)
