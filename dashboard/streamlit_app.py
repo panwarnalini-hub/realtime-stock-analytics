@@ -160,17 +160,6 @@ with st.sidebar:
     st.info("**API Rate Limit**\n\n5 calls per minute on free tier")
 
     st.markdown("---")
-    st.markdown(
-    """
-    <div style="font-size: 0.85rem; color: #888;">
-        <b>Author</b><br>
-        Nalini Panwar<br>
-        <a href="https://github.com/panwarnalini-hub" target="_blank">GitHub</a> ·
-        <a href="https://www.linkedin.com/in/nalinipanwar/" target="_blank">LinkedIn</a>
-    </div>
-    """,
-    unsafe_allow_html=True
-)
 
 # Initialize fetcher
 fetcher = StockFetcher(API_KEY)
@@ -334,4 +323,18 @@ if st.button("Fetch Latest Data", use_container_width=True):
         
     else:
         st.error("Failed to fetch data. Please verify your API key and network connection.")
-        
+
+# ---------- Footer ----------
+st.markdown("---")
+
+st.markdown(
+"""
+<div style="text-align:center; font-size:0.9rem; color:#999;">
+    <b>Author</b><br>
+    Nalini Panwar<br>
+    <a href="https://github.com/panwarnalini-hub" target="_blank">GitHub</a> ·
+    <a href="https://www.linkedin.com/in/nalinipanwar/" target="_blank">LinkedIn</a>
+</div>
+""",
+unsafe_allow_html=True
+)
