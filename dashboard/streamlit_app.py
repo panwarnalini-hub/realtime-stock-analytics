@@ -12,11 +12,16 @@ from stock_fetcher import StockFetcher
 
 # Import config
 try:
-    sys.path.append(os.path.join(os.path.dirname(__file__), '..'))
-    from config import API_KEY
-except ImportError:
-    st.error("Please create config.py with your API_KEY in the project root")
-    st.stop()
+    # Try Streamlit secrets first (for cloud deployment)
+    API_KEY = st.secrets["API_KEY"]
+except (KeyError, FileNotFoundError):
+    # Fall back to config.py for local development
+    try:
+        sys.path.append(os.path.join(os.path.dirname(__file__), '..'))
+        from config import API_KEY
+    except ImportError:
+        st.error("Please create config.py with your API_KEY or add API_KEY to Streamlit secrets")
+        st.stop()
 
 st.set_page_config(
     page_title="Stock Analytics Dashboard",
