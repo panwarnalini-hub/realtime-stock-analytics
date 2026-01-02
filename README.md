@@ -5,6 +5,14 @@
 [![Delta Lake](https://img.shields.io/badge/Delta%20Lake-2.4+-blue.svg)](https://delta.io/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
+## Live Demo
+
+**Interactive Streamlit Dashboard:**  
+https://realtime-stock-analytics.streamlit.app/
+
+> Real-time stock market visualization powered by Alpha Vantage.  
+> *(API rate limits apply on free tier.)*
+
 Production data pipeline for stock market analytics with medallion architecture on Databricks. Includes batch processing pipeline and interactive dashboard for different use cases.
 
 ---
